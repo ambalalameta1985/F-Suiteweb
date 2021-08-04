@@ -1,7 +1,0 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
-<parameters>
-  <setParameter name="IIS Web Application Name" value="FlexeDisplay" />
-  <setParameter name="Flex-eReport-Web.config Connection String" value="Data Source=D:\Programme File\Flex-eSuite\Flex-eReport.db;Database Password=Pannadhay;" />
-  <setParameter name="Flex-eDisplay-Web.config Connection String" value="Data Source=D:\Programme File\Flex-eSuite\Flex-eDisplay.db;Database Password=Pratapkachetak;" />
-  <setParameter name="Flex-eDisplayData-Web.config Connection String" value="Data Source=D:\Programme File\Flex-eSuite\Flex-eDisplayData.db;" />
-</parameters>
