@@ -1,0 +1,34 @@
+﻿<div class="scroller-data">
+    <div class="row-fluid">
+        <div data-ng-repeat="tag in customScroller.tags"
+             class="scroller-container col-md-3 col-sm-4 col-xs-6  col-no-pad" 
+             ng-cloak>
+
+            <!-- one scroller -->
+            <div class="scroller-detail">
+                <div class="scroller-header">
+                    <span class="scroller-name custom-name">COMPARISON VIEW</span>                    
+                </div>
+
+                <!-- scroller tag -->
+                <div class="scroller-tag  custom-scroller-view">
+
+                    <div class="tag-name">{{ tag.Tag_Name }} <small class="tag-unit">({{ tag.Unit }})</small></div>
+                    <div class="tag-value" data-ng-style="{ color : customScroller.setTagValueColor(tag) }">{{ tag.Value }}</div>
+                    <div class="tag-detail">
+                        <ul>
+                             <li><span>Minimum Range</span><span class="tag-detail-value">{{ tag.Scale_Min}}</span></li>
+                            <li><span>Maximum Range</span><span class="tag-detail-value">{{ tag.Scale_Max}}</span></li>
+                            <li><span>Quality</span><span class="tag-detail-value" data-ng-style="{ color : customScroller.setQualityColor(tag.Quality) }">{{ tag.Quality }}</span></li>
+                        </ul>
+                    </div>
+                </div>
+
+                               
+            </div>
+        </div>
+        <div data-ng-if="customScroller.tags.length === 0" style="padding: 5px;">
+                    This is no scroller selected to view
+         </div>
+    </div>
+</div>

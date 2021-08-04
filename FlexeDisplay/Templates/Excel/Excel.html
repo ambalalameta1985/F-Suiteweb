@@ -1,0 +1,93 @@
+﻿<div class="header">
+    <div class="title pull-left">Flex-eReport</div>
+    <div class="logout pull-right">
+        <a data-ui-sref="Flex-eSuiteHome" tooltip-placement="bottom" uib-tooltip="Home"><i class="fa fa-home fa-2x"></i></a>
+        <i tooltip-placement="bottom" uib-tooltip="Logout"  data-ng-click="excel.logout()" class="fa fa-sign-out fa-2x"></i>
+    </div>
+</div>
+<div class="display-container">
+    <div class="row-fluid">
+        <div class="col-md-2 col-sm-2 col-xs-2 col-no-pad">
+            <div class="panel category">
+                <div class="bar">
+                    REPORT
+                </div>
+                <div class="category-content">
+                    <ul>
+                        <li data-ng-class="{ active: excel.activeReport(report) }"
+                            data-ng-repeat="report in excel.reports"
+                            data-ng-if="report.id !== -1">
+
+                            <a data-ng-click="excel.setReport(report)"
+                                data-ui-sref="{{ report.sref }}()">{{ report.name | uppercase }}
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-8 col-sm-8 col-xs-8 col-no-pad">
+            <div class="panel View">
+                <div class="filter-bar display-filter">
+                    <ul>
+                        <li><span class="display-option">REPORT</span></li>
+                        <li class="search-filter" 
+                            style="float:right !important"
+                            data-ng-show="excel.currentReport.id === 1">
+                            <span class="display-option">
+                                <input type="text" name="txtReportSearch" placeholder="Search" data-ng-model="excel.searchReport" /> <i class="fa fa-search"></i>
+                            </span>
+                            
+                        </li>
+                        <li style="float:right !important"
+                            data-ng-show="excel.currentReport.id === 2">
+                            <span style="cursor:pointer" class="display-option" data-ng-click="excel.toggleFilterPopup = !excel.toggleFilterPopup">
+                                Search 
+                                <i class="fa fa-caret-down"></i>
+                            </span>
+							<div class="report-filter-popup" data-ng-show="excel.toggleFilterPopup">
+										<ul>
+											<li>
+                                                <div class="filter rpt-from-date-filter">
+													<label for="txtPreGeneratedFilter">Report</label>
+													<input type="text" name="txtPreGeneratedFilter" data-ng-model="excel.searchGenerated" />
+												</div>                                             
+												<div class="filter rpt-from-date-filter">
+													<label for="dtpFromDate">From Date</label>
+													<input type="date" name="dtpFromDate" data-ng-model="excel.startDateFilter" />
+												</div>
+												<div class="filter rpt-from-date-filter">
+													<label for="dtpToDate">To Date</label>
+													<input type="date" name="dtpToDate" data-ng-model="excel.endDateFilter" />
+												</div>
+											</li>
+										</ul>
+										<div class="filter-footer">
+											<!--<span ><i class="fa fa-save"></i><a data-ng-click="excel.toggleFilterPopup = false" >Apply</a></span>-->
+											<span data-ng-click="excel.clearFilter()"><i class="fa fa-undo"></i><a  >Clear</a></span>
+										</div>	
+									</div>
+						</li>
+                    </ul>
+                </div>
+
+                <div class="display-detail" data-ng-mousedown="excel.toggleFilterPopup = false" >
+                    <div data-ui-view style="height: 100%"></div>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-2 col-sm-2 col-xs-2 col-no-pad">
+            <div class="panel category">
+                <div class="bar">
+                    DESCRIPTION
+                </div>
+                <div class="category-content">                    
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="footer">
+    <div class="pull-left">Logged by: {{ excel.user.username }}</div>
+    <div class="pull-right">Powered by Flex-eSuite</div>
+</div>

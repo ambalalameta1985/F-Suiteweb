@@ -1,0 +1,34 @@
+﻿<div class="scroller-data">
+    <div class="row-fluid">
+
+        <div data-ng-repeat="_scroller in scrollers track by $index"
+            class="scroller-container col-md-3 col-sm-4 col-xs-6  col-no-pad">
+
+            <!-- one scroller -->
+            <div class="scroller-detail" data-ng-init="scroller.activeTagIndexs.push(0)">
+                <div class="scroller-header">
+                    <span class="scroller-name">{{ _scroller.DisplayName }}</span>
+                    <span class="scroller-close" data-ng-click="scroller.close($index)" title="close"><i class="fa fa-close"></i></span>
+                </div>
+
+                <!-- scroller tag -->
+                <div class="scroller-tag"
+                    data-parent-index="{{ $parent.$index }}"
+                    data-ng-repeat="tag in scroller.tags | filter: { Display_Id : _scroller.DisplayId }"
+                    data-ng-class="{ active : ($index === scroller.activeTagIndexs[$parent.$index]) }"
+                    ng-cloak>
+
+                    <div class="tag-name">{{ tag.Tag_Name }} <small class="tag-unit">({{ tag.Unit }})</small></div>
+                    <div class="tag-value" data-ng-style="{ color : scroller.setTagValueColor(tag) }">{{ tag.Value }}</div>
+                    <div class="tag-detail">
+                        <ul>
+                            <li><span>Min Value/Time</span><span class="tag-detail-value">{{ tag.MinValue}}/{{ tag.MinTimestamp | jsDate | date:"hh:mm:ss"}}</span></li>
+                            <li><span>Max Value/Time</span><span class="tag-detail-value">{{ tag.MaxValue}}/{{ tag.MaxTimestamp | jsDate | date:"hh:mm:ss"}}</span></li>
+                            <li><span>Quality</span><span class="tag-detail-value" data-ng-style="{ color : scroller.setQualityColor(tag.Quality) }">{{ tag.Quality }}</span></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,75 @@
+﻿@import url(./Report/Instant.css);
+@import url(./Report/Pre-Generated.css);
+
+
+.search-filter input[type=text]{
+    border: none;  
+    background-color: transparent;
+    padding-top: 0px;
+    outline: none;
+}
+
+.report-filter-popup{
+	position: absolute;	
+    top: 30px;
+    right: 5px;
+    width: 200px;
+    height: 200px;
+    font-size: 12px;
+    background-color: #ECEFF1;
+    box-shadow: -3px 3px 18px #9E9E9E;
+    border:1px solid #666;
+    z-index: 1000;
+    color: #000;
+}
+
+.report-filter-popup ul{
+	padding: 5px 10px;
+}
+
+.report-filter-popup ul li{
+	 width: 100%;
+	 text-align: left;
+	 font-style: normal;
+	 font-weight: normal;
+}
+
+.report-filter-popup ul li .filter{
+	margin:5px 0px;
+}
+
+
+
+.report-filter-popup ul li input{
+	 width: 100%;
+}
+
+.report-filter-popup .filter-footer{
+	position: absolute;
+    bottom: 0px;
+    left: 0px;
+    width: 100%;
+    height: 26px;    
+    color: #fff;
+    background-color:#666;
+    font-weight: normal;
+}
+
+.report-filter-popup .filter-footer span{	
+    font-style: normal;
+    padding: 5px 10px;
+    color: white;
+    cursor:pointer;
+    display:block;
+    width:70px;
+}
+
+    .report-filter-popup .filter-footer span:hover {
+        background-color:#9E9E9E;
+    }
+
+.report-filter-popup .filter-footer span a{
+	margin-left:5px;
+	/*text-decoration: none;*/
+	color: #fff;
+}

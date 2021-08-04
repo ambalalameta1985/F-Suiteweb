@@ -1,0 +1,59 @@
+﻿
+<div class="header">
+    <div class="title pull-left">Flex-eSuite</div>
+    <div class="logout pull-right"><i tooltip-placement="bottom" uib-tooltip="Logout" data-ng-click="mdiMain.logout()" class="fa fa-sign-out fa-2x"></i></div>
+</div>
+<div class="display-container">
+    <div class="row-fluid">
+        <div class="col-md-2 col-sm-2 col-xs-2 col-no-pad">
+            <div class="panel category">
+                <div class="bar">
+                    MODULE
+                </div>
+                <div class="category-content">
+                    <ul>
+                        <li data-ng-class="{ active: mdiMain.activeModule(module) }"
+                            data-ng-repeat="module in mdiMain.modules">
+                            <a data-ng-click="mdiMain.setModule(module)">
+                                {{ module.name }}
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-8 col-sm-8 col-xs-8 col-no-pad">
+            <div class="panel View">
+                <div class="filter-bar display-filter">
+                    <ul>
+                        <li><span class="display-option">VIEW</span></li>
+                    </ul>
+                </div>
+
+                <div class="display-detail">
+                    <div class="module">
+                        <div class="module-name">{{mdiMain.currentModule.name }}</div>
+                        <div class="module-description">{{mdiMain.currentModule.description }}</div>
+                        <div class="module-anchor">
+                            <a href="{{mdiMain.currentModule.href }}">Launch</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-2 col-sm-2 col-xs-2 col-no-pad">
+            <div class="panel category">
+                <div class="bar">
+                    DESCRIPTION
+                </div>
+                <div class="category-content">
+                   
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="footer">
+    <div class="pull-left">Logged by: {{ mdiMain.user.username }}</div>
+    <div class="pull-right">Powered by Flex-eSuite</div>
+</div>
