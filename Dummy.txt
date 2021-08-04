@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-This Is Dummy text file
-=======
-Hi This Is Test file
->>>>>>> 763c36f24a426659572fc871396de121a352a141
+Hi this is test file........
+how r you
+
