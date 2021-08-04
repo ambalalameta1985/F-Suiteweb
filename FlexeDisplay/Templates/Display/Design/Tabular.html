@@ -1,0 +1,29 @@
+﻿<div class="tabular-data">
+    <div class="tabular-detail">
+        <table class="table table-condensed" ng-cloak>
+            <tr class="header-data">
+                <th>TAG NAME</th>
+                <th>CURRENT VALUE</th>
+                <th>CURRENT TIMESTAMP</th>
+                <th>UNIT</th>
+                <th data-ng-if="tabular.isDetailView">MIN VALUE</th>
+                <th data-ng-if="tabular.isDetailView">MIN TIMESTAMP</th>
+                <th data-ng-if="tabular.isDetailView">MAX VALUE</th>
+                <th data-ng-if="tabular.isDetailView">MAX TIMESTAMP</th>
+                <th>QUALITY</th>
+            </tr>
+
+            <tr class="tag-data" data-ng-repeat="tag in tabular.tags">
+                <th>{{ tag.Tag_Name }}</th>
+                <th data-ng-style="{ color : tabular.setTagValueColor(tag) }">{{ tag.Value }}</th>
+                <th>{{ tag.Timestamp | jsDate | date:"dd-MMM-yyyy hh:mm:ss"}}</th>
+                <th>{{ tag.Unit }}</th>
+                <th data-ng-if="tabular.isDetailView">{{ tag.MinValue }}</th>
+                <th data-ng-if="tabular.isDetailView">{{ tag.MinTimestamp | jsDate | date:"dd-MMM-yyyy hh:mm:ss"}}</th>
+                <th data-ng-if="tabular.isDetailView">{{ tag.MaxValue }}</th>
+                <th data-ng-if="tabular.isDetailView">{{ tag.MaxTimestamp | jsDate | date:"dd-MMM-yyyy hh:mm:ss"}}</th>
+                <th data-ng-style="{ color : tabular.setQualityColor(tag.Quality) }">{{ tag.Quality }}</th>
+            </tr>
+        </table>
+    </div>
+</div>

@@ -1,0 +1,11 @@
+﻿<div class="mimic-data">
+    <div class="mimic-detail"
+        data-ng-class="{'italic' : mimic.displayDetail.MimicDetail.IsItalic, 'bold' : mimic.displayDetail.MimicDetail.IsBold }"
+        style="background: url('{{ mimic.displayDetail.MimicDetail.ImageUrl }}') no-repeat; background-size: 100% 100%; font-family: {{ mimic.displayDetail.MimicDetail.FontFamily }}; font-size: {{ mimic.displayDetail.MimicDetail.FontSize }}pt">
+
+        <span class="mimic-tag"
+            data-ng-repeat="tag in mimic.tags"
+            data-ng-style="{ 'left': (tag.MimicTag.Left * 100/mimic.displayDetail.MimicDetail.Width) + '%', 'top': ((tag.MimicTag.Top  * 100)/mimic.displayDetail.MimicDetail.Height) + '%','color': mimic.setTagValueColor(tag), 'background-color': mimic.displayDetail.MimicDetail.IsTransparent ? 'transparent' : (mimic.displayDetail.MimicDetail.BackgroundColor === '0' ? '#000' : mimic.getHexCode(mimic.displayDetail.MimicDetail.BackgroundColor))}">{{ tag.Value }} <span ng-show="mimic.displayDetail.MimicDetail.IsDisplayUnit">{{ tag.Unit }}</span>           
+        </span>
+    </div>
+</div>

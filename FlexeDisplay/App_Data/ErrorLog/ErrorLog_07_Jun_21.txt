@@ -1,0 +1,7 @@
+
+
+Cannot create ActiveX component.	Caption : Excel Template   07 Jun 21 03:47 PM
+-------------------------------------------------------
+ Message           :INSTANT REPORT
+ Data              :System.Collections.ListDictionaryInternal
+-------------------------------------------------------

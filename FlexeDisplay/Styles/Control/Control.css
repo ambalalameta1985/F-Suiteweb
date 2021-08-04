@@ -1,0 +1,118 @@
+﻿ul {
+    list-style-type: none;
+    padding: 0px;
+    margin: 0px;
+}
+
+.col-no-pad {
+    padding: 0px;
+}
+
+[ng\:cloak], [ng-cloak], .ng-cloak {
+    display: none;
+}
+
+.bold {
+    font-weight: bold;
+}
+
+.italic {
+    font-style: italic;
+}
+
+.textbox {
+    width: 250px;
+    height: 30px;
+    border: none;
+    padding: 2px 5px;
+    margin-top: 2px;
+}
+
+.button {
+    border: none;
+    background-color: #BDBDBD;
+    width: 250px;
+    height: 35px;
+    font-size: 18px;
+    font-weight: bold;
+    margin: 20px 0px;
+    padding: 4px 8px;
+}
+
+.btn-blue {
+    background-color: #42A5F5;
+    border: 2px solid #42A5F5;
+    color: #fff;
+    border-radius: 3px;
+    text-decoration: none;
+}
+
+    .btn-blue:hover, .btn-blue:visited {
+        text-decoration: none;
+        color: #fff;
+    }
+
+.button-blue {
+    background-color: #42A5F5;
+    border: 2px solid #42A5F5;
+    color: #fff;
+    transition: border 0.1s,color 0.5s,background-color 0.5s;
+}
+
+    .button-blue:hover {
+        background-color: #fff;
+        border: 2px solid #42A5F5;
+        color: #42A5F5;
+    }
+
+/* UI Bootstrap Modal CSS */
+.backdrop-white {
+    background-color: #fff;
+}
+
+[uib-modal-window] .modal-dialog {
+    margin: 15% auto;
+}
+
+[uib-modal-window] .modal-content {
+    border-radius: 0px;
+}
+
+    [uib-modal-window] .modal-content .modal-header {
+        padding: 12px 10px;
+    }
+
+        [uib-modal-window] .modal-content .modal-header .modal-title {
+            font-size:20px;
+        }
+
+        [uib-modal-window] .modal-content .modal-header .modal-close {
+            height: 20px;
+            font-size: 18px;
+            margin: 5px 5px;
+            cursor: pointer;
+        }
+
+    [uib-modal-window] .modal-content .modal-footer {
+        padding: 10px 15px;
+    }
+
+        [uib-modal-window] .modal-content .modal-footer .modal-custom-button {
+            width: 80px !important;
+            padding: 5px !important;
+            border-radius: 0px !important;
+        }
+
+/*Spinner*/
+.spinner {
+    position: fixed;
+    top: 40%;
+    left: 40%;
+    width: 150px;
+    height: 150px;
+}
+
+    .spinner img {
+        width: 100%;
+        height: 100%;
+    }

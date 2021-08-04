@@ -1,0 +1,17 @@
+﻿<div class="gauge-data">
+    <div class="gauge-detail">
+        <div class="row-fluid">
+            <div class="col-md-4 col-sm-6 col-xs-12"
+                data-ng-repeat="tag in gauge.tags">
+                <div class="gauge">
+                     <input gauge-control 
+                            tag="{{ tag }}" 
+                            class="gauge-control" 
+                            value="{{ tag.Value }}" />
+
+                     <p class="gauge-tag-name">{{ tag.Tag_Name | uppercase }}</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,17 @@
+
+
+Error ! while fetch tag data   13 Jan 20 12:07 PM
+-------------------------------------------------------
+ Message           :You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ')' at line 1
+ Source            :MySql.Data
+ Data              :System.Collections.ListDictionaryInternal
+ StackTrace        :   at MySql.Data.MySqlClient.MySqlStream.ReadPacket()
+   at MySql.Data.MySqlClient.NativeDriver.GetResult(Int32& affectedRow, Int64& insertedId)
+   at MySql.Data.MySqlClient.Driver.GetResult(Int32 statementId, Int32& affectedRows, Int64& insertedId)
+   at MySql.Data.MySqlClient.Driver.NextResult(Int32 statementId, Boolean force)
+   at MySql.Data.MySqlClient.MySqlDataReader.NextResult()
+   at MySql.Data.MySqlClient.MySqlCommand.ExecuteReader(CommandBehavior behavior)
+   at MySql.Data.MySqlClient.MySqlCommand.ExecuteReader()
+   at FlexeDisplay.Areas.Display.Models.Parameter_Value.retrieveParameterValue(String tagKeys) in d:\Ketan\excel project\FlexeDisplay\MIS Popup\FlexeDisplay\FlexeDisplay\Areas\Display\Models\Parameter-Value.cs:line 48
+ TargetSite        :MySql.Data.MySqlClient.MySqlPacket ReadPacket()
+-------------------------------------------------------

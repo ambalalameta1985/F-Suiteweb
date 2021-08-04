@@ -1,0 +1,25 @@
+﻿.module {
+    padding: 60px 10px;
+}
+
+.module .module-name{
+       font-size: 35px;
+    font-family: garamond;
+    font-style: italic;
+}
+
+.module .module-description{
+     min-height: 100px;
+         padding-left: 20px;
+}
+
+
+.module .module-anchor{
+      margin: 10px 0px;
+          padding-left: 20px;
+}
+
+    .module .module-anchor a {
+        font-size:18px;
+    }
+
